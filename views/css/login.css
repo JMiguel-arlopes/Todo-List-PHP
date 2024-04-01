@@ -1,0 +1,141 @@
+@import url(style.css);
+
+.container_login {
+  font-family: "Roboto", sans-serif;
+  background: #7ba58d;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.content_side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 2rem;
+  height: 100vh;
+}
+
+.content_side:first-child {
+  flex: 1;
+  background-color: var(--white);
+  background-image: url(../../assets/bg.jpg);
+  background-repeat: repeat;
+  background-size: 300px;
+  box-shadow: 5px 0 10px #fff, 2px 0 5px var(--bg);
+  justify-content: flex-end;
+  padding: 0.5rem;
+}
+
+.content_side:last-child {
+  flex: 2;
+}
+
+.content_side > img {
+  max-height: 95vh;
+  max-width: 90%;
+  width: 100%;
+  border-bottom-left-radius: 40%;
+  border-bottom-right-radius: 40%;
+}
+
+.title {
+  color: #f8ebbe;
+  font-size: 42px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin-bottom: 2rem;
+}
+
+.form {
+  background-color: #fff;
+  width: 600px;
+  /* max-width: 75%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.25rem;
+  border: 1px solid white;
+  border-radius: 8px;
+  box-shadow: 0 0 4px white, 0 0 8px #4e26ff, 0 0 12px #502eee, 0 0 16px #fff;
+}
+
+.title_form {
+  width: 100%;
+  color: #222;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.box_input {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column-reverse;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.input_text {
+  color: #222;
+  background-color: white;
+  height: 50px;
+  width: 100%;
+  padding: 8px 5px;
+  border: 1px solid white;
+  border-radius: 4px;
+  outline: 0;
+  border: 1px solid #777;
+}
+
+.label {
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  transition: 0.25s;
+}
+
+.input_text:focus + .label,
+.input_text:focus-visible + .label,
+.input_text:focus-within + .label,
+.label.top_label {
+  font-size: 12px;
+  background-color: white;
+  padding: 0 3px;
+  top: 0;
+}
+
+.btn_submit {
+  background-color: var(--bg);
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+  width: 100%;
+  padding: 5px 12px;
+  border: 1px solid #777;
+  outline: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.register-msg {
+  font-size: 12px;
+  font-weight: 400;
+  padding-top: 1rem;
+  width: 100%;
+  text-align: left;
+}
