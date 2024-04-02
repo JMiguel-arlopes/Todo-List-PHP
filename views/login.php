@@ -1,5 +1,6 @@
 <?php 
-    
+    require './models/Connect_db.php';
+    $user = new Connect_db(); 
 ?>
 
 <!DOCTYPE html>
@@ -35,5 +36,11 @@
             </div>
         </section>
     </main>
+
+    <?php 
+        if(isset($_POST['name']) and isset($_POST['password'])) {
+           $name = $_POST['name']; 
+        }
+    ?>
 </body>
 </html>
