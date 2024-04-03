@@ -39,7 +39,10 @@
 
     <?php 
         if(isset($_POST['name']) and isset($_POST['password'])) {
-           $name = $_POST['name']; 
+           $name = addslashes($_POST['name']);
+           $psw = addslashes($_POST['password']);
+            
+           $user->connect();
         }
     ?>
 </body>
