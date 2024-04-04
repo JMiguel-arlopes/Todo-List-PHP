@@ -39,10 +39,20 @@
 
     <?php 
         if(isset($_POST['name']) and isset($_POST['password'])) {
-           $name = addslashes($_POST['name']);
-           $psw = addslashes($_POST['password']);
+            $name = addslashes($_POST['name']);
+            $psw = addslashes($_POST['password']);
             
-           $user->connect();
+            if(!empty($name) and !empty($psw)){
+                $user->connect("todo_list", "localhost", "root", "");
+                if($user->login($name, $psw)) {
+                    header("location: home.php");
+                } else {
+                    echo "Usuario ou senha inexistentes!";
+                }
+            } else {
+                echo "preencha todos os campos!";
+            }
+           
         }
     ?>
 </body>
