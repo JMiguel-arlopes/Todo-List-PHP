@@ -1,3 +1,9 @@
+<?php  
+    require './models/Connect_db.php';
+    $user = new Connect_db();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
