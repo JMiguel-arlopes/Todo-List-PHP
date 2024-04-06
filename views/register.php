@@ -32,8 +32,8 @@
                         <label for="password" class="label">Senha</label>
                     </div>
                     <div class="box_input">
-                        <input type="password" name="password" class="input_text" required>
-                        <label for="password" class="label">Confirme sua Senha</label>
+                        <input type="password" name="re-password" class="input_text" required>
+                        <label for="re-password" class="label">Confirme sua Senha</label>
                     </div>
                     <input type="submit" value="Entrar" class="btn_submit">
                     <h5 class="register-msg">Já tem conta? <a href="./register.php">Retorne ao Login</a></h5>
@@ -41,5 +41,16 @@
             </div>
         </section>
     </main>
+
+    <?php 
+
+        if($_POST["password"] == $_POST["re-password"]) {
+            
+        }
+
+        if(isset($_POST["name"]))
+
+        $user->register()
+    ?>
 </body>
 </html>
