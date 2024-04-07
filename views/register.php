@@ -43,14 +43,31 @@
     </main>
 
     <?php 
+        if (isset($_POST["name"]) and isset($_POST["password"]) and isset($_POST["re-password"])) {
+            $name = addslashes($_POST["name"]);
+            $psw = addslashes($_POST["password"]);
+            $re_psw = addslashes($_POST["re-password"]);
 
-        if($_POST["password"] == $_POST["re-password"]) {
-            
+            if(!empty($name) and !empty($psw) and !empty($re_psw)) {
+
+            } else {
+                echo "Prencha todos os campos";
+            }
+            if($_POST["password"] == $_POST["re-password"]) {
+                $user->connect("todo_list", "localhost", "root", "");
+                if($user->msgErro == "") {
+                    if($user->register($name, $psw)) {
+                        echo "cadastrado com sucesso, irmão";                    
+                    } else {
+                        echo $user->msgErro;
+                    }
+                } else {
+                    echo "erro:".$user->msgErro;
+                }
+            } else {
+                echo "As senhas estão diferentes";
+            }
         }
-
-        if(isset($_POST["name"]))
-
-        $user->register()
     ?>
 </body>
 </html>
